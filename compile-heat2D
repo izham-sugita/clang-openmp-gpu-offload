@@ -1,0 +1,1 @@
+clang++ -std=c++11 -fopenmp -fopenmp-targets=nvptx64 -O3 heat2D.cpp 
