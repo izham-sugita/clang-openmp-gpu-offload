@@ -107,27 +107,8 @@ void solve(int imax, int jmax, int itermax,
 				  +T[i4]-2.0*T[ij]+T[i3]);
       }
     }
-
-    /*Update value*/
-    //#pragma omp target teams distribute parallel for simd collapse(2)    
-    /*
-    for(int i=1; i<imax-1; ++i){
-      for(int j=1; j<jmax-1; ++j){
-	ij = i*jmax+j;
-	T[ij] = Tnew[ij];
-      }
-    }
-    */
     
     swap(T,Tnew);
-
-    /*
-    tmp = T;
-    T = Tnew;
-    Tnew = tmp;
-    */
-    
-    //iter = iter+1;
     
     } //run loop within interval
     iterout = iterout + interval;
